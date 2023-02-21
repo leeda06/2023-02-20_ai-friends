@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    /* Simple Reset CSS */
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #58666e; /*contents 글씨*/
+      background-color: #FCBC66; /*contents 배경*/
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjus: 100%;  /* iphone font size 변경 방지 */
+    }
+    li { list-style: none; }        /*목록의 원을 없앰*/
+    a { text-decoration: none; }    /*링크를 연결하면 글씨변경이 일어나지 않음*/
+    h1, h2, h3, h4, h5, h6, p {     /*제목이나 글씨 여백을 줌*/
+      margin: 10px 5px;
+    }
+    h1 { font-size: 1.8em; }
+    button {width: 43px; height: 43px}
+    #wrap {
+      width: 100%;
+      /* margin-top = header height */
+      margin-top: 60px;
+    }
+
+    /* Navigation bar */
+    header {
+      /* for sticky header */
+      position: fixed;    /*top부분 위치 고정*/
+      top: 0;
+
+      width: 100%;
+      height: 60px;
+      z-index: 2000;          /*레이아웃 숫자 높을수록 먼저보임*/
+      background-color: #8DC6BF;  /*headr부분 배경색*/
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+    }
+    .logo {
+      display: inline-block;    /*속성*/
+      height: 36px;             /*높이*/
+      margin: 12px 0 12px 25px; /*빈공간*/
+    }
+    .logo > img { height: 36px; }/*로고 크기*/
+    nav {
+      float: right;               /*위치조절*/
+    }
+    .nav-items {
+      margin-right: 20px;
+    }
+    .nav-items > li {
+      display: inline-block;  /* 가로정렬 */
+    }
+    .nav-items > li > a {
+      /* for Vertical Centering */
+      line-height: 60px;
+      padding: 0 30px;
+      color: rgba(255, 255, 255, 100);/*기본 headr 글씨 색*/
+    }
+    .nav-items > li > a:hover {
+      color: rgba(88, 64, 83, 0.2);/*선택시 headr 글씨 색*/
+    }
+
+    /* contents */
+    /* clearfix */
+    #content-wrap:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    aside {
+      /* for fixed side bar */
+      position: fixed;
+      top: 60px;
+      bottom: 0;
+      width: 200px;  /* 너비 고정 */
+      padding-top: 25px;
+      background-color: #333;/*목록 배경*/
+    }
+    #favor_font{
+      font-weight : bold;
+}
+#favor_font a:visited{
+      color: black;
+}
+#favor_font a:hover{
+      background-color: #dee5e7;
+      transition: all 0.2s ;
+      padding: 10px;
+      padding-left: 25%;
+      padding-right: 25%;
+}
+    /* aside navigation */
+    aside > ul {
+      width: 200px;
+    }
+    aside > ul > li > a {
+      display: block;
+      color: #fff;
+      padding: 10px 0 10px 20px;
+    }
+    aside > ul > li > a.active {
+      background-color: #F97B4F;
+    }
+    aside > ul > li > a:hover:not(.active) {
+      background-color: #555;
+    }
+    aside > h1 {
+      padding: 20px 0 20px 20px;
+      color: #fff;
+    }
+    /* footer */
+    footer {
+      /* footer를 aside위에 올리기 위해 사용(부유객체) */
+      position: fixed;
+      height: 60px;
+      width: 100%;
+      padding: 0 25px;
+      line-height: 60px;
+      color: #8a8c8f;
+      border-top: 1px solid #dee5e7;
+      background-color: #f2f2f2;
+      bottom : 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <a class="logo" href="#home"><img src="F:\Ai_Friends_School_HTML\사진\Logo.png"></a>
+      <nav>
+        <ul class="nav-items">
+          <li><a href="#home" class="home">홈</a></li>
+          <li><a href="#login" class="login">로그인</a></li>
+          <li><a href="#join" class="join">회원가입</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="content-wrap">
+      <aside>
+        <h1>무서운 <br>날씨 알리미</h1>
+        <ul>
+          <li><a href="#directions" class="directions">길찾기</a></li>
+          <li><a href="#favorites" class="favorites">즐겨찾기</a></li>
+          <li><a href="#information" class="information">교통정보 확인</a></li>
+          <li><a href="#reminder" class="reminder">실시간 알리미</a></li>
+        </ul>
+      </aside>
+      </div>
+ </body>
+</html>
